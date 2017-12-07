@@ -1,0 +1,30 @@
+                          Sistema De Batalha
+
+========================================================================
+# Fazer testes.
+
+Teste = rolagem + dificuldade + bonus;
+
+Bonus pode ser de armadura(defesa),
+
+Obs: bonus caso o personagem tiver algum se não tiver bonus séra nulo.
+
+========================================================================
+
+# Dano do personagem
+
+caso o oponente conseguir passar no teste do ataque ou magia ele causara dano em seu inimigo,diminuindo o ponto de vida.
+
+========================================================================
+
+# Recuperar/perde vida ou mana
+
+caso o personagem possua uma poção de vida ou mana  e usar a mesma ela recuperara um certa porcentagem de sua vida/mana
+
+========================================================================
+
+Aberto a novas ideias/sugestões/implementações...
+
+========================================================================
+
+

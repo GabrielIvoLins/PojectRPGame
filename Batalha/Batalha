@@ -1,0 +1,20 @@
+				Batalha
+
+Os personagems rolam iniciativa(Um D6) para ver quem começa,ataca 1º quem tirar o maior número seguido pelo seu oponente;
+
+o ataque tera efeito caso seja maior que a defesa;
+
+se ataque for menor ou igual  a defesa o oponente defendeu;
+
+caso tenha uma alternativa fugir ele fugira;
+
+cura caso ele tenha magia/poção de cura;
+
+
+enquanto vida player e vida inimigo maior que 0 então
+	
+	começa a luta
+		Iniciativa
+		ataca primeiro o que tirar o maior número 
+		ataca segundo
+		continua até a vida chegar a 0 ou se alguem fugir 
