@@ -1,0 +1,706 @@
+#coding: utf-8
+<ScreenManagement>:
+    PaginaInicial:
+    LabelConfig:
+    Creditos:
+    TextoA0:
+    TextoA1:
+    TextoA1A:
+    TextoA1B:
+    TextoA1C:
+    TextoA1BD:
+    TextoB0:
+    TextoB1:
+    TextoB1A:
+    TextoB1B:
+    TextoB1C:
+    TextoB1AA:
+    TextoB1AB:
+    TextoB1BB:
+    TextoB1CA:
+    ContinuaC1:
+    ContinuaC2:
+    ContinuaC3:
+    LojaArmas:
+
+
+#:import i texto
+#:import h historia.PTBR.A
+#:import j historia.PTBR.B
+
+
+<PaginaInicial>:
+    name: 'paginaInicial'
+    FloatLayout:
+
+        Image:
+            source: "imagem/RPGame.jpg"
+            size: (900,681)
+
+        Button:
+            on_release: app.root.switch_to_labelConfig()
+            text: 'Inicio'
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"top":.6}
+            #font_name: "Myfrida Bold.otf"
+
+
+        Button:
+            on_release: app.root.switch_to_creditos()
+            text: "Creditos"
+            size_hint: (.1,.1)
+            pos_hint: {"center_x": .5,"center_y": .45}
+            #font_name: "Myfrida Bold.otf"
+
+<LabelConfig>:
+    name: 'labelConfig'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: i.infor
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.67}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            name: "Retorno"
+            on_release: app.root.switch_to_paginaInicial()
+            text: 'Voltar'
+            #font_size: 26
+            size_hint: (.1,.1)# .08 medidas
+            pos_hint: {"center_x":.4,"center_y":.1}#valor de x .04 valor de y .96
+
+        Button:#
+            text: "Comecar a historia"
+            on_release: app.root.switch_to_textoA0()
+            size_hint: (.2,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<Creditos>:
+    name: 'creditos'
+
+    FloatLayout:
+
+        orientation: 'vertical'
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text:i.t
+            font_size: 28
+            pos_hint: {"center_x":.3,"center_y":.6}
+            #font_name: "Myfrida Bold.otf"
+            color: 0,0,0,1
+
+        Label:
+            text:i.tt
+            pos_hint: {"center_x":.7,"center_y":.6}
+            font_size: 28
+            color: 0,0,0,1
+
+        Button:
+            on_release: app.root.switch_to_paginaInicial()
+            text: 'Voltar'
+            font_size: 18
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+
+<TextoA0>:
+    name: 'textoA0'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: h.A0
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.52}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: h.A0_2
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.7,"center_y":.57}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "Continue lendo"
+            on_release: app.root.switch_to_textoA1()
+            size_hint: (.2,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+
+<TextoA1>:
+    name: 'textoA1'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: h.A1
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.55}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: h.alt_A1
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.68,"center_y":.65}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoA1A()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoA1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoA1C()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoA1A>:
+    name: 'textoA1A'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: h.A1A
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.58}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoA1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoA1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoA1C()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoA1B>:
+    name: 'textoA1B'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: h.A1B
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.68}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: h.alt_A1B
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.68,"center_y":.63}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB0()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.35,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB0()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.45,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoA1C()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.55,"center_y":.1}
+
+        Button:
+            text: "D"
+            on_release: app.root.switch_to_textoA1BD()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.65,"center_y":.1}
+
+<TextoA1C>:
+    name: 'textoA1C'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: 'Sistema de batalha\nEm desenvolvimento '
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.68}
+            font_size: 18
+            color: 0,0,0,1
+
+<TextoA1BD>:
+    name: 'textoA1BD'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: h.A1BD
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.56}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: h.alt_A1B_2
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.68,"center_y":.67}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB0()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.35,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB0()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.45,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoA1C()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.55,"center_y":.1}
+
+<TextoB0>:
+    name: 'textoB0'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B0
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.53}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.B0_2
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.68,"center_y":.79}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "Continue lendo"
+            on_release: app.root.switch_to_textoB1()
+            size_hint: (.2,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoB1>:
+    name: 'textoB1'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.305,"center_y":.73}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.alt_B1
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.69,"center_y":.67}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB1A()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoB1C()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoB1A>:
+    name: 'textoB1A'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1A
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.555}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.alt_B1A
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.69,"center_y":.685}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB1AA()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB1AB()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoB1B>:
+    name: 'textoB1B'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1B
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.67}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.alt_B1B
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.69,"center_y":.67}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_continuaC1()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB1BB()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_continuaC2()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoB1C>:
+    name: 'textoB1C'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1C
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.635}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB1CA()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_continuaC3()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_continuaC2()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+<TextoB1AA>:
+    name: 'textoB1AA'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1AA
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.67}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+<TextoB1AB>:
+    name: 'textoB1AB'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1AB
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.305,"center_y":.57}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.alt_B1AB
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.69,"center_y":.72}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.4,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.5,"center_y":.1}
+
+        Button:
+            text: "C"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.6,"center_y":.1}
+
+
+<TextoB1BB>:
+    name: 'textoB1BB'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1BB
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.61}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.alt_B1BB
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.69,"center_y":.72}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_continuaC1()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.45,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_continuaC2()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.55,"center_y":.1}
+
+<TextoB1CA>:
+    name: 'textoB1CA'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: j.B1CA
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.53}
+            font_size: 18
+            color: 0,0,0,1
+
+        Label:
+            text: j.alt_B1CA
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.675,"center_y":.66}
+            font_size: 18
+            color: 0,0,0,1
+
+        Button:
+            text: "A"
+            on_release: app.root.switch_to_lojaArmas()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.45,"center_y":.1}
+
+        Button:
+            text: "B"
+            on_release: app.root.switch_to_textoB1B()
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.55,"center_y":.1}
+
+<ContinuaC1>:
+    name: 'continuaC1'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: 'Continua... '
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.68}
+            font_size: 18
+            color: 0,0,0,1
+
+<ContinuaC2>:
+    name: 'continuaC2'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: 'Continua... '
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.68}
+            font_size: 18
+            color: 0,0,0,1
+
+<ContinuaC3>:
+    name: 'continuaC3'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: 'Continua... '
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.68}
+            font_size: 18
+            color: 0,0,0,1
+
+<LojaArmas>:
+    name: 'lojaArmas'
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "imagem/historia2.jpg"
+
+        Label:
+            text: 'Loja de Armas\nem desenvolvimento!!!'
+            size_hint: (.1,.1)
+            pos_hint: {"center_x":.3,"center_y":.68}
+            font_size: 18
+            color: 0,0,0,1
